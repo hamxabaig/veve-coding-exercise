@@ -7,21 +7,14 @@ $ npm install
 ## Running the app
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+docker-compose up
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ npm run test
+$ npm install && npm run test
 
 # test coverage
 $ npm run test:cov

@@ -1,0 +1,26 @@
+version: '3.5'
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'veve'
+      MYSQL_USER: 'db'
+      MYSQL_PASSWORD: 'mysql_pass'
+      MYSQL_ROOT_PASSWORD: 'mysql_root_pass'
+    ports:
+      - '3306:3306'
+    volumes:
+      - veve-db:/var/lib/mysql
+
+  backend:
+    build: .
+    image: node:14
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+
+volumes:
+  veve-db:
