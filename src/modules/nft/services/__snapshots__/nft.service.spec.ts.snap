@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NFTService throws error if new owner was not found 1`] = `"User not found with id 2"`;
+
+exports[`NFTService throws error if nft does not belong to owner 1`] = `"NFT not found with id 1 or you might not have access to it"`;
+
+exports[`NFTService throws error if nft was not found 1`] = `"NFT not found with id 1 or you might not have access to it"`;
